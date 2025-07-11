@@ -1,0 +1,39 @@
+<div class="content">
+
+  <div class="login">
+    <div class="form">
+      <h2>Login To ReBoom</h2>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="">Your Email :</label>
+          <input type="text" name="email" id="email" placeholder="johnsmith@example.com" formControlName="email" required>
+        </div>
+        <span style="color: white;margin-bottom:20px" *ngIf="form.get('email')?.touched && form.get('email')?.value == null">Your Email is
+          required</span>
+        <span style="color: white;margin-bottom: 20px;"
+          *ngIf="form.get('email')?.touched && form.get('email')?.invalid && form.get('email')?.value !=null">
+          The Email You Entered is not valid</span>
+
+
+        <div>
+          <label for="">Password :</label>
+          <input type="password" name="password" id="password" placeholder="********" formControlName="password" required>
+        </div>
+        <span style="color: white;margin-bottom: 20px;"
+          *ngIf="form.get('password')?.touched && !form.get('password')?.valid && form.get('password')?.value !=null">
+          Your Password must be at least 8 characters</span>
+
+        <span style="color: white;margin-bottom: 20px;"
+          *ngIf="form.get('password')?.touched && form.get('password')?.value == null">Your Password is required</span>
+
+
+        <button type="submit" [class.invalid-button]="form.invalid" [disabled]="form.invalid">login</button>
+
+        <a routerLink="/reset">Forget Password ?</a>
+        <a routerLink="/register">Don't have an Account? Register now</a>
+      </form>
+    </div>
+  </div>
+
+
+</div>

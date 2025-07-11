@@ -1,0 +1,17 @@
+<div class="container">
+  <button class="back-btn">&larr;</button>
+  <h2 class="title">Owner</h2>
+  <button class="add-btn">Add Product</button>
+
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.image" alt="product" />
+    <div>
+      <h3>{{ product.name }}</h3>
+      <p>\${{ product.price }}</p>
+    </div>
+    <div class="actions">
+      <button class="delete-btn">Delete</button>
+      <button class="update-btn">Update</button>
+    </div>
+  </div>
+</div>

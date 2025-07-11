@@ -1,0 +1,42 @@
+.form-container {
+  background-color: #2d1460;
+  color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+.back-btn {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background-color: #5e3fc2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, textarea {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+.submit-btn {
+  background: #5e3fc2;
+  border: none;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

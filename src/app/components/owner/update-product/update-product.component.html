@@ -1,0 +1,17 @@
+<div class="form-container">
+  <button class="back-btn">&larr;</button>
+  <h2 class="title">✏️ Update Product</h2>
+
+  <form>
+    <label>Name of product:</label>
+    <input type="text" [value]="product.name" />
+
+    <label>Description:</label>
+    <textarea rows="3">{{ product.description }}</textarea>
+
+    <label>Price:</label>
+    <input type="number" [value]="product.price" />
+
+    <button class="submit-btn" type="submit">Update</button>
+  </form>
+</div>

@@ -1,0 +1,155 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: #3D306B;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.content {
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Register Form Styles */
+.register .form {
+  background-color: #4A3D84;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.register .form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #fff;
+}
+
+.register .form form div {
+  margin-bottom: 20px;
+}
+
+.register .form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.register .form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.register .form input:focus {
+  border-color: #7E6CD9;
+  outline: none;
+}
+
+.register .form span {
+  display: block;
+  color: #ffcccc;
+  font-size: 14px;
+  margin-top: 5px;
+  min-height: 18px;
+}
+
+.register .form button {
+  width: 100%;
+  padding: 14px;
+  background-color: white;
+  color: #3D306B;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+  font-weight: bold;
+}
+
+.register .form button:hover {
+  background-color: #eee;
+  transform: scale(1.02);
+}
+
+.register .form button.invalid-button {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.register .form .name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+a{
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: white;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register .form {
+    padding: 30px 20px;
+  }
+
+  .register .form h2 {
+    font-size: 26px;
+  }
+
+  .register .form .name {
+    flex-direction: column;
+  }
+
+  .register .form .div1,
+  .register .form .div2 {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .register .form {
+    padding: 20px 15px;
+  }
+
+  .register .form h2 {
+    font-size: 22px;
+  }
+
+  .register .form input {
+    font-size: 14px;
+  }
+}

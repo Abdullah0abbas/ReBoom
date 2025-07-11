@@ -1,0 +1,70 @@
+<div class="content">
+
+
+  <div class="register">
+    <div class="form">
+      <h2>Register For ReBoom</h2>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+
+        <div class="name">
+
+          <div class="div1">
+            <div>
+              <label for="">First Name :</label>
+              <input type="text" placeholder="John" formControlName="fname" required>
+            </div>
+            <span style="color: white" *ngIf="form.get('fname')?.touched && form.get('fname')?.value == null">
+              Your First Name is required</span>
+            <span style="color: white"
+              *ngIf="form.get('fname')?.touched && form.get('fname')?.invalid && form.get('fname')?.value !=null">
+              The Name is not valid</span>
+          </div>
+
+          <div class="div2">
+            <div>
+              <label for="">Last Name :</label>
+              <input type="text" placeholder="Smith" formControlName="lname" required>
+            </div>
+            <span style="color: white" *ngIf="form.get('lname')?.touched && form.get('lname')?.value == null">
+              Your Last Name is required</span>
+            <span style="color: white"
+              *ngIf="form.get('lname')?.touched && form.get('lname')?.invalid && form.get('lname')?.value !=null">
+              The Name is not valid</span>
+          </div>
+        </div>
+
+        <div>
+          <label for="email">Your Email :</label>
+          <input type="text" name="email" id="email" placeholder="johnsmith@example.com" formControlName="email" required>
+        </div>
+        <span style="color: white;margin-bottom:10px" *ngIf="form.get('email')?.touched && form.get('email')?.value == null">Your Email is
+          required</span>
+        <span style="color: white;margin-bottom:10px"
+          *ngIf="form.get('email')?.touched && form.get('email')?.invalid && form.get('email')?.value !=null">
+          The Email You Entered is not valid</span>
+
+
+        <div>
+          <label for="password">Password :</label>
+          <input type="password" name="password" id="password" placeholder="********" formControlName="password" required>
+        </div>
+        <span style="color: white;margin-bottom:10px"
+          *ngIf="form.get('password')?.touched && !form.get('password')?.valid && form.get('password')?.value !=null">
+          Your Password must be at least 8 characters</span>
+
+        <span style="color: white;margin-bottom:10px"
+          *ngIf="form.get('password')?.touched && form.get('password')?.value == null">
+          Your Password is required</span>
+
+
+
+
+        <button type="submit" [class.invalid-button]="form.invalid" [disabled]="form.invalid">Sign Up</button>
+      </form>
+      <a routerLink="/login">Already have an account? Login</a>
+    </div>
+  </div>
+
+
+</div>

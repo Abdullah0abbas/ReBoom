@@ -1,0 +1,17 @@
+<div class="chat-container">
+  <button class="back-btn">&larr;</button>
+  <h2 class="title">💬 Chats</h2>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search in messages..." />
+  </div>
+
+  <div class="chat-card" *ngFor="let chat of chats">
+    <img [src]="chat.image" alt="User" />
+    <div>
+      <strong>{{ chat.name }}</strong>
+      <p>{{ chat.message }}</p>
+    </div>
+    <button class="open-chat">Open</button>
+  </div>
+</div>
